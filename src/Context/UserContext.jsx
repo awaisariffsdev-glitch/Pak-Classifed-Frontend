@@ -22,10 +22,10 @@ export default function UserProvider({ children }) {
                 setCurrent(JSON.parse(storedUser))
             } catch (error) {
                 console.log("Invalid user data in localStorage, clearing it");
-                localStorage.clear("user");
+                localStorage.removeItem("user");
             }
 
-            if (token) {
+            if (token&&token!="undefined") {
                 setLoggodIn(true)
             }
         }
@@ -36,6 +36,7 @@ export default function UserProvider({ children }) {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         setUser(null);
+        setCurrent(null)
         setLoggodIn(false)
     }
 
@@ -46,7 +47,7 @@ export default function UserProvider({ children }) {
                 user,
                 setUser,
                 loggedIn,
-                setLoggedIn,
+                setLoggodIn,
                 logout,
                 setCurrent,
                 current
