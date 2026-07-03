@@ -10,7 +10,7 @@ function LogIn() {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="dark" className='fw-medium font-monospace' onClick={handleShow}>
                 LogIn
             </Button>
 

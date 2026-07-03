@@ -10,7 +10,7 @@ function SignUp() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="dark" className='fw-medium font-monospace' onClick={handleShow}>
         SignUp
       </Button>
 
