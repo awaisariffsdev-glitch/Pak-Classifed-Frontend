@@ -183,8 +183,9 @@ function VerifyOTP({ show, handleClose, email, onVerified }) {
         setResending(true);
         try {
             // ✅ Resend must hit the "send OTP" endpoint, not /user/verify
-            const response = await axios.post("http://localhost:8080/user/request-signup", {
-                email
+            const response = await axios.post("http://localhost:8080/user/requestSignUp", {
+                email,
+                resend:true
             });
             console.log("OTP Resent", response.data);
             showToast("A new OTP has been sent to your email", "success");
@@ -316,13 +317,7 @@ function VerifyOTP({ show, handleClose, email, onVerified }) {
                     </p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button
-                        className="navtheme-btn-outline"
-                        onClick={handleClose}
-                        disabled={loading}
-                    >
-                        Cancel
-                    </Button>
+                  
                     <Button
                         className="navtheme-btn-dark"
                         onClick={handleVerify}
