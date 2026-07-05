@@ -1,3 +1,28 @@
 .hover-effect:hover{
   color: red !important;
 }
+/* 
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: white;
+  max-width: 600px;
+}
+
+.carousel-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.carousel-content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+} */

@@ -553,6 +553,14 @@ function SignUp({ onAuthSuccess }) {
                 // fullscreen="sm-down"
                 centered
             >
+                <ToastContainer position="top-end" className="p-3" style={{ zIndex: 1080 }}>
+                    <Toast onClose={() => setToast((t) => ({ ...t, show: false }))} show={toast.show} delay={3000} autohide className={`navtheme-toast navtheme-toast-${toast.variant}`}>
+                        <Toast.Header closeVariant="white">
+                            <strong className="me-auto">{toast.variant === "success" ? "Success" : "Error"}</strong>
+                        </Toast.Header>
+                        <Toast.Body>{toast.message}</Toast.Body>
+                    </Toast>
+                </ToastContainer>
                 <Modal.Header closeButton closeVariant="white">
                     <Modal.Title className="navtheme-title">Personal Details</Modal.Title>
                 </Modal.Header>
@@ -616,14 +624,7 @@ function SignUp({ onAuthSuccess }) {
 
             <VerifyOTP show={showOtp} handleClose={handleOtpClose} email={form.email} onVerified={handleVerified} />
 
-            <ToastContainer position="top-end" className="p-3" style={{ zIndex: 1080 }}>
-                <Toast onClose={() => setToast((t) => ({ ...t, show: false }))} show={toast.show} delay={3000} autohide className={`navtheme-toast navtheme-toast-${toast.variant}`}>
-                    <Toast.Header closeVariant="white">
-                        <strong className="me-auto">{toast.variant === "success" ? "Success" : "Error"}</strong>
-                    </Toast.Header>
-                    <Toast.Body>{toast.message}</Toast.Body>
-                </Toast>
-            </ToastContainer>
+
         </>
     );
 }

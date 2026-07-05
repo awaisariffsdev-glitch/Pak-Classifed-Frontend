@@ -198,7 +198,7 @@ const NavBar = () => {
                     alt="Profile"
                     className="navtheme-avatar-img"
                   />
-                  <span className="font-monospace fw-medium d-none d-md-inline navtheme-username">
+                  <span className="font-monospace fw-medium text-light">
                     {current?.fullname || "My Account"}
                   </span>
                 </div>
@@ -235,8 +235,8 @@ const NavBar = () => {
         <Navbar.Collapse id="main-navbar-collapse" className="order-lg-2">
           <Nav className="mx-lg-auto gap-lg-4 gap-2 align-items-lg-center">
             <Nav.Link as={Link} to="/" onClick={closeExpand} className="navtheme-link hover-effect">Home</Nav.Link>
-            <Nav.Link onClick={closeExpand} className="navtheme-link">About</Nav.Link>
-            <Nav.Link onClick={closeExpand} className="navtheme-link">Sell Car</Nav.Link>
+            <Nav.Link onClick={closeExpand} className="navtheme-link hover-effect">About</Nav.Link>
+            <Nav.Link onClick={closeExpand} className="navtheme-link hover-effect">Sell Car</Nav.Link>
 
             {/* <NavDropdown title="Categories" className="fw-medium font-monospace hover-effect" id="categories-dropdown">
               <div className="d-flex ">
@@ -250,7 +250,7 @@ const NavBar = () => {
 
             {/* <NavDropdown title="Categories" className='fw-medium font-monospace hover-effect' id="basic-nav-dropdown"> */}
             <NavDropdown
-              title={<span className="navtheme-link">Categories</span>}
+              title={<span className="navtheme-link hover-effect">Categories</span>}
               id="categories-dropdown"
             >
               <div className="d-flex">
@@ -273,7 +273,7 @@ const NavBar = () => {
 
             </NavDropdown>
 
-            <Nav.Link onClick={closeExpand} className="navtheme-link">Contact</Nav.Link>
+            <Nav.Link onClick={closeExpand} className="navtheme-link hover-effect">Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -281,7 +281,7 @@ const NavBar = () => {
       <style>{`
         .navtheme-navbar {
           background-color: #1D2023 !important;
-          border-bottom: 2px solid white;
+          border-bottom: 1px solid white;
           z-index: 1030;
         }
         .navtheme-brand {
