@@ -234,9 +234,9 @@ const NavBar = () => {
 
         <Navbar.Collapse id="main-navbar-collapse" className="order-lg-2">
           <Nav className="mx-lg-auto gap-lg-4 gap-2 align-items-lg-center">
-            <Nav.Link as={Link} to="/" onClick={closeExpand} className="navtheme-link hover-effect">Home</Nav.Link>
-            <Nav.Link onClick={closeExpand} className="navtheme-link hover-effect">About</Nav.Link>
-            <Nav.Link onClick={closeExpand} className="navtheme-link hover-effect">Sell Car</Nav.Link>
+            <Link as={Link} to="/" onClick={closeExpand} className="navtheme-link hover-effect">Home</Link>
+            <Link to="/about" onClick={closeExpand} className="navtheme-link hover-effect">About</Link>
+            <Link  onClick={closeExpand} className="navtheme-link hover-effect">Sell Car</Link>
 
             {/* <NavDropdown title="Categories" className="fw-medium font-monospace hover-effect" id="categories-dropdown">
               <div className="d-flex ">
@@ -273,7 +273,7 @@ const NavBar = () => {
 
             </NavDropdown>
 
-            <Nav.Link onClick={closeExpand} className="navtheme-link hover-effect">Contact</Nav.Link>
+            <Link to="/contact" onClick={closeExpand} className="navtheme-link hover-effect">Contact</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -296,6 +296,7 @@ const NavBar = () => {
           color: #f1f1f1 !important;
           font-family: monospace;
           font-weight: 500;
+          text-decoration:none
         }
         .navtheme-link:hover {
           opacity: 0.8;

@@ -75,7 +75,7 @@ function CarByCategory() {
             )}
 
             <style>{`
-                .cbc-page { background-color: #FDFDFD; min-height: 100vh; padding: 30px 24px 60px; font-family: monospace; margin-top:20px}
+                .cbc-page { background-color: #FDFDFD; min-height: 100vh; padding: 30px 24px 60px; font-family: monospace; margin-top:20px,box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);}
                 .cbc-header { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto 24px; flex-wrap: wrap; gap: 12px; }
                 .cbc-title { color: #1D2023; font-family: monospace; font-weight: 500; margin: 0; }
                 .cbc-btn-outline { font-family: monospace; font-weight: 500; background-color: transparent; color: #1D2023; border: 1px solid rgba(0, 0, 0, 0.5); transition: all 0.2s ease; }
