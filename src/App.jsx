@@ -23,6 +23,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Profile from './Components/Profile'
 import Carousel from './Components/Carasoul'
 import Search from './Components/Search'
+import Categories from './Components/Category'
 
 const App = () => {
   const location = useLocation();
@@ -37,6 +38,7 @@ const App = () => {
       </Routes>
       {!isProfilePage && <Carousel />}
       {!isProfilePage&&<Search/>}
+      {!isProfilePage&&<Categories/>}
     </div>
   )
 }
