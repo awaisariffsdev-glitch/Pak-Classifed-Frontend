@@ -1,37 +1,80 @@
-import React, { useEffect, useState } from 'react'
+
+
+
+import React, { useEffect, useRef, useState } from 'react'
 import GetCars from '../Services/CarFetch';
+import { useSearchParams } from 'react-router-dom';
+import { SearchCars } from '../Services/SearchResult';
 
 const CarBoardMain = () => {
     const [cars, setCars] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [visibleCards, setVisibleCards] = useState({}); // ADDED: tracks which cards have animated in
+    const cardRefs = useRef([]); // ADDED: refs for each rendered car card
+    const [searchParams] = useSearchParams();
+    const query = searchParams.get('q') || '';
 
     useEffect(() => {
         const fetchCars = async () => {
             setLoading(true);
-            const data = await GetCars();
-            console.log(data)
-            setCars(Array.isArray(data)?data:[]);
+            const data = query.trim() ? await SearchCars(query.trim()) : await GetCars();
+            setCars(Array.isArray(data) ? data : [])
+            setVisibleCards({}); // ADDED: reset animation state when a new search/list loads
+            cardRefs.current = []; // ADDED: clear stale refs from the previous list
             setLoading(false)
         };
         fetchCars();
-    }, [])
+    }, [query])
+
+    // ADDED: observe each car card and reveal it once it scrolls into view
+    useEffect(() => {
+        if (loading || cars.length === 0) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const index = Number(entry.target.dataset.index);
+                    if (entry.isIntersecting) {
+                        setVisibleCards((prev) => ({ ...prev, [index]: true }));
+                    }
+                });
+            },
+            {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px',
+            }
+        );
+
+        cardRefs.current.forEach((card) => {
+            if (card) observer.observe(card);
+        });
+
+        return () => observer.disconnect();
+    }, [cars, loading]);
+
     return (
         <div>
             <div className="cbm-page ">
-                <h2 className="cbm-heading">All Listed Cars</h2>
+                <h2 className="cbm-heading">{query ? `Search Results for "${query}"` : 'All Listed Cars'}</h2>
 
                 {loading && (
                     <p className="cbm-status">Loading cars...</p>
                 )}
 
-                {!loading && Array.isArray(cars)&&cars.length === 0 && (
-                    <p className="cbm-status">No cars found.</p>
+                {!loading && Array.isArray(cars) && cars.length === 0 && (
+                    <p className="cbm-status">{query ? `No Cars found match "${query}"` : "No cars found."}</p>
                 )}
 
-                {!loading && Array.isArray(cars) &&cars.length > 0 && (
+                {!loading && Array.isArray(cars) && cars.length > 0 && (
                     <div className="cbm-grid">
-                        {cars.map((car) => (
-                            <div key={car._id} className="cbm-card">
+                        {cars.map((car, index) => (
+                            <div
+                                key={car._id}
+                                ref={(el) => (cardRefs.current[index] = el)} // ADDED: attach ref for observer
+                                data-index={index} // ADDED: identify card in observer callback
+                                className={`cbm-card ${visibleCards[index] ? 'cbm-card-visible' : ''}`} // ADDED: conditional reveal class
+                                style={{ transitionDelay: `${(index % 4) * 80}ms` }} // ADDED: slight stagger per row
+                            >
                                 <div className="cbm-img-wrap">
                                     <img
                                         src={car?.image ? `http://localhost:8080/${car.image}` : "https://picsum.photos/400/300"}
@@ -42,7 +85,6 @@ const CarBoardMain = () => {
                                 <div className="cbm-info">
                                     <h4 className="cbm-car-title">{car.title}</h4>
                                     <p className="cbm-car-meta">{car.brand} • {car.model} • {car.year}</p>
-                                    <p className="cbm-car-meta">{car.color} • {car.mileage} km • {car.fuelType}</p>
                                     <p className="cbm-car-city">{car.city}</p>
                                     <p className="cbm-car-price">PKR {car.price}</p>
                                 </div>
@@ -55,7 +97,6 @@ const CarBoardMain = () => {
                 .cbm-page {
                     background-color: #FFFFFF;
                     min-height: 100vh;
-                    border-top: 2px solid #1D2023;
                     padding: 40px 24px 60px;
                     font-family: monospace;
                 }
@@ -64,7 +105,6 @@ const CarBoardMain = () => {
                     color: #1D2023;
                     text-align: center;
                     font-family: monospace;
-                    
                     letter-spacing: 0.5px;
                     margin-bottom: 30px;
                 }
@@ -89,7 +129,16 @@ const CarBoardMain = () => {
                     border: 1px solid rgba(255,255,255,0.25);
                     border-radius: 10px;
                     overflow: hidden;
-                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    /* ADDED: initial hidden state before scrolling into view */
+                    opacity: 0;
+                    transform: translateY(40px);
+                    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.2s ease;
+                }
+
+                .cbm-card-visible {
+                    /* ADDED: revealed state - fades in and slides up */
+                    opacity: 1;
+                    transform: translateY(0);
                 }
 
                 .cbm-card:hover {
@@ -151,6 +200,15 @@ const CarBoardMain = () => {
                     }
                     .cbm-heading {
                         font-size: 18px;
+                    }
+                }
+
+                /* ADDED: respect users who prefer reduced motion */
+                @media (prefers-reduced-motion: reduce) {
+                    .cbm-card {
+                        opacity: 1;
+                        transform: none;
+                        transition: none;
                     }
                 }
             `}</style>

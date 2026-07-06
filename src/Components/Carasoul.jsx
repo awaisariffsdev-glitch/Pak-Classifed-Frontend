@@ -82,7 +82,7 @@ function CarouselFadeExample() {
                         Drive Your Dream: Find Your Perfect Car Today.
                     </p>
                     <div className="d-flex gap-4 carousel-btn-group">
-                        <button className="btn btn-danger carousel-btn">Browse Cars</button>
+                        <button className="btn btn-danger carousel-btn" >Browse Cars</button>
                         <button className="btn btn-danger carousel-btn">Sell Car</button>
                     </div>
                 </div>

@@ -113,11 +113,28 @@
 // export default Search;
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
+
+    const [query, setQuery] = useState('');
+    const navigate = useNavigate();
+
+    const handleSearch = () => {
+        if (!query.trim()) return;
+        navigate(`/?q=${encodeURIComponent(query.trim())}`);
+
+    }
+
+
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            handleSearch();
+        }
+    }
     return (
         <div className="navtheme-search-container">
             <div className="navtheme-search-box">
@@ -125,11 +142,14 @@ const Search = () => {
 
                 <input
                     type="text"
+                    value={query}
+                    onKeyDown={handleKeyDown}
+                    onChange={(e)=>{setQuery(e.target.value)}}
                     placeholder="Search by Make, Model, Price, or City..."
                     className="navtheme-search-input"
                 />
 
-                <button className="navtheme-search-btn font-monospace fw-medium">
+                <button className="navtheme-search-btn font-monospace fw-medium" onClick={handleSearch} >
                     Search
                 </button>
             </div>
