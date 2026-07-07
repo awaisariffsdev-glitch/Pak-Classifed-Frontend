@@ -51,8 +51,26 @@
 // export default CarouselFadeExample;
 
 import Carousel from 'react-bootstrap/Carousel';
+import AddCarModal from './AddCarModel';
+import { useContext, useState } from 'react';
+// import AddCarModal from './AddCarModel';
+import { UserContext } from '../Context/UserContext';
+
 
 function CarouselFadeExample() {
+    const { loggedIn } = useContext(UserContext);
+    const [showAddCar, setShowAddCar] = useState(false);
+
+
+    const handleSellCar=()=>{
+        if(!loggedIn){
+            alert("First Login to Sell Car")
+            return
+        };
+        setShowAddCar(true);
+
+
+    }
     return (
         <>
             <div className="carousel-container">
@@ -83,7 +101,8 @@ function CarouselFadeExample() {
                     </p>
                     <div className="d-flex gap-4 carousel-btn-group">
                         <button className="btn btn-danger carousel-btn" >Browse Cars</button>
-                        <button className="btn btn-danger carousel-btn">Sell Car</button>
+                        <button className="btn btn-danger carousel-btn" onClick={handleSellCar}>Sell Car</button>
+                        <AddCarModal show={showAddCar} onHide={()=>setShowAddCar(false)}/>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,12 @@
 
 
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import GetCars from '../Services/CarFetch';
 import { useSearchParams } from 'react-router-dom';
 import { SearchCars } from '../Services/SearchResult';
+import { CarRefreshContext } from '../Context/CarRefreshContext';
+
 
 const CarBoardMain = () => {
     const [cars, setCars] = useState([]);
@@ -13,7 +15,7 @@ const CarBoardMain = () => {
     const cardRefs = useRef([]); // ADDED: refs for each rendered car card
     const [searchParams] = useSearchParams();
     const query = searchParams.get('q') || '';
-
+    const {refreshKey}=useContext(CarRefreshContext)
     useEffect(() => {
         const fetchCars = async () => {
             setLoading(true);
@@ -24,7 +26,7 @@ const CarBoardMain = () => {
             setLoading(false)
         };
         fetchCars();
-    }, [query])
+    }, [query,refreshKey])
 
     // ADDED: observe each car card and reveal it once it scrolls into view
     useEffect(() => {
