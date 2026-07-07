@@ -8,17 +8,22 @@ import { BrowserRouter } from 'react-router-dom'
 import UserProvider from './Context/UserContext.jsx';
 import { UserCarProvider } from './Context/UserCarContext.jsx';
 import { CarRefreshProvider } from './Context/CarRefreshContext.jsx';
+import UpdateProvider from './Context/UserContextUpdate.jsx';
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
   <UserProvider>
     <UserCarProvider>
-      <CarRefreshProvider>
+      <UpdateProvider>
 
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </CarRefreshProvider>
+        <CarRefreshProvider>
+
+
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </CarRefreshProvider>
+      </UpdateProvider>
 
     </UserCarProvider>
   </UserProvider>

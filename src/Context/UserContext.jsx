@@ -5,7 +5,9 @@ export const UserContext = createContext({
     setUser: () => { },
     loggedIn: false,
     setLoggodIn: () => { },
-    logout: () => { }
+    logout: () => { },
+    
+
 })
 
 export default function UserProvider({ children }) {

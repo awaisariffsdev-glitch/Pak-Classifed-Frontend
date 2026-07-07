@@ -108,7 +108,7 @@ const AddCarModal = ({ show, onHide }) => {
                             <div className="col-md-6">
                                 <Form.Label className="navtheme-form-label">Price (PKR)</Form.Label>
                                 <Form.Control
-                                    type="number" name="price" value={form.price} onChange={handleChange}
+                                    type="text" name="price" value={form.price} onChange={handleChange}
                                     className="navtheme-form-control" required
                                 />
                             </div>
