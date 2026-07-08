@@ -53,7 +53,7 @@ function LogIn() {
                 }
             );
 
-        console.log("FULL RESPONSE:", response.data);
+            console.log("FULL RESPONSE:", response.data);
             const token = response.data.token;
             const loggodInUser = response.data.user;
             if (token && loggodInUser) {
@@ -66,7 +66,8 @@ function LogIn() {
 
                 setLoggodIn(true);
                 setCurrent(response.data.user);
-                showToast("LoggdeIn successfully");
+                // showToast("LoggdeIn successfully");
+                showToast(`Welcome back, ${loggodInUser.fullname || "there"}!`, "success");
 
 
                 handleClose();
