@@ -9,6 +9,7 @@ import UserProvider from './Context/UserContext.jsx';
 import { UserCarProvider } from './Context/UserCarContext.jsx';
 import { CarRefreshProvider } from './Context/CarRefreshContext.jsx';
 import UpdateProvider from './Context/UserContextUpdate.jsx';
+import { CarUpdateProvider } from './Context/CarUpdateContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
@@ -17,11 +18,14 @@ createRoot(document.getElementById('root')).render(
       <UpdateProvider>
 
         <CarRefreshProvider>
+          <CarUpdateProvider>
 
 
-          <BrowserRouter>
-            <App />
-          </BrowserRouter>
+
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </CarUpdateProvider>
         </CarRefreshProvider>
       </UpdateProvider>
 

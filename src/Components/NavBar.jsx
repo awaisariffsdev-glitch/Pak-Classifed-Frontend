@@ -198,9 +198,9 @@ const NavBar = () => {
                     alt="Profile"
                     className="navtheme-avatar-img"
                   />
-                  <span className="font-monospace fw-medium text-light">
+                  {/* <span className="font-monospace fw-medium text-light">
                     {current?.fullname || "My Account"}
-                  </span>
+                  </span> */}
                 </div>
               </Dropdown.Toggle>
 
