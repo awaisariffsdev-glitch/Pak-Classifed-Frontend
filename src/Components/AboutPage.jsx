@@ -12,14 +12,14 @@ function AboutPage() {
             {/* HERO */}
             <div className="navtheme-about-hero">
                 <img
-                    src="img/PakClassifed.png"
+                    src="img/Rolls.webp"
                     alt=""
                     className="navtheme-about-hero-img"
                 />
                 <div className="navtheme-about-hero-overlay" />
-                <div className="navtheme-about-hero-content">
-                    <span className="navtheme-about-hero-bracket" aria-hidden="true" />
-                    <h1 className="navtheme-about-hero-title">About Us</h1>
+                <div className="contactpage-hero-title">
+                    <span className="contactpage-hero-bracket" />
+                    <h1 className='fw-bold'>About </h1>
                 </div>
             </div>
 
@@ -107,6 +107,25 @@ function CheckIcon() {
 }
 
 const pageStyles = `
+
+
+.contactpage-hero-title {
+          position: absolute;
+          left: 40px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          color:white !important;
+        }
+        .contactpage-hero-bracket {
+          display: inline-block;
+          width: 44px;
+          height: 70px;
+          border: 3px solid red !important;
+          border-right: none  !important;
+          margin-right: 18px;
+        }
     .navtheme-about-page {
         background-color: #ffffff;
         font-family: monospace;
@@ -124,7 +143,8 @@ const pageStyles = `
         height: 100%;
         object-fit: cover;
         display: block;
-        filter: grayscale(15%);
+       
+         filter: brightness(0.55);
     }
     .navtheme-about-hero-overlay {
         position: absolute;

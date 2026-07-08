@@ -59,7 +59,7 @@ const ContactPage = () => {
       {/* Hero */}
       <div className="contactpage-hero">
         <img
-          src="/img/PakClassifed.png"
+          src="/img/Rolls.webp"
           alt="Contact"
           className="contactpage-hero-img"
         />
@@ -187,8 +187,8 @@ const ContactPage = () => {
 
       <style>{`
         .contactpage-wrapper {
-          background-color: #1D2023;
-          color: #f1f1f1;
+          background-color: white ;
+          color: #1D2023;
           font-family: monospace;
           min-height: 100vh;
         }
@@ -246,7 +246,7 @@ const ContactPage = () => {
         .contactpage-heading {
           font-weight: 700;
           margin-bottom: 36px;
-          color: #ffffff;
+          color: #1D2023;
         }
 
         /* Info cards */
@@ -255,8 +255,8 @@ const ContactPage = () => {
           display: flex;
           align-items: center;
           gap: 12px;
-          background-color: #24282b;
-          border: 1px solid rgba(255,255,255,0.25);
+          background-color: white;
+          border: 2px solid rgba(0, 0, 0, 0.25);
           border-radius: 8px;
           padding: 18px 20px;
           height: 100%;
@@ -278,16 +278,21 @@ const ContactPage = () => {
           overflow: hidden;
         }
         .contactpage-copy {
-          color: rgba(241,241,241,0.8);
+          color: #1D2023;
           margin-bottom: 20px;
         }
 
-        .contactpage-form .form-control {
+         .form-control {
           background-color: #24282b;
-          border: 1px solid rgba(255,255,255,0.3);
+          border: 1px solid rgba(0, 0, 0, 0.3);
           color: #f1f1f1;
           font-family: monospace;
         }
+          .contactpage-form {
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 24px;
+}
         .contactpage-form .form-control::placeholder {
           color: rgba(241,241,241,0.5);
         }
@@ -309,7 +314,7 @@ const ContactPage = () => {
         .contactpage-submit:hover,
         .contactpage-submit:focus {
           background-color: #1D2023;
-          border-color: white;
+          border-color: black;
           color: white;
         }
         .contactpage-submit:disabled {

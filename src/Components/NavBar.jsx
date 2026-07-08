@@ -160,6 +160,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
+import AddCarModal from './AddCarModel';
 import SignUp from './SignUp';
 import LogIn from './LogIn';
 import { UserContext } from '../Context/UserContext';
@@ -167,9 +168,21 @@ import { UserContext } from '../Context/UserContext';
 const NavBar = () => {
   const { loggedIn, logout, current } = useContext(UserContext);
   const [expanded, setExpanded] = useState(false);
+  const [showAddCar, setShowAddCar] = useState(false);
 
   const closeExpand = () => setExpanded(false);
 
+
+  const handleSellCar = () => {
+    if (!loggedIn) {
+      alert("First Login to Sell Car")
+      return
+    };
+    setShowAddCar(true);
+    closeExpand(true)
+
+
+  }
   return (
     <Navbar
       expand="lg"
@@ -236,7 +249,8 @@ const NavBar = () => {
           <Nav className="mx-lg-auto gap-lg-4 gap-2 align-items-lg-center">
             <Link as={Link} to="/" onClick={closeExpand} className="navtheme-link hover-effect">Home</Link>
             <Link to="/about" onClick={closeExpand} className="navtheme-link hover-effect">About</Link>
-            <Link  onClick={closeExpand} className="navtheme-link hover-effect">Sell Car</Link>
+            <Link onClick={handleSellCar} className="navtheme-link hover-effect">Sell Car</Link>
+            <AddCarModal show={showAddCar} onHide={() => setShowAddCar(false)} />
 
             {/* <NavDropdown title="Categories" className="fw-medium font-monospace hover-effect" id="categories-dropdown">
               <div className="d-flex ">
