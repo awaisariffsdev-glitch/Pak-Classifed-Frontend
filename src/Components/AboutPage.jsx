@@ -1,9 +1,5 @@
 import React from 'react';
 
-// About Us page — styled to match the app's existing "navtheme" system
-// (dark #1D2023 panels, monospace type, white hairline borders, green accent)
-// so it feels like it belongs next to NavBar / Profile rather than a
-// separately-designed page.
 
 function AboutPage() {
     return (
