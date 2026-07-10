@@ -127,6 +127,7 @@
 // export default Categories;
 
 
+// Category cards — displays 8 car categories as clickable cards with staggered scroll-reveal animation
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -200,7 +201,7 @@ function Categories() {
                     padding: 40px 20px 60px;
                     box-sizing: border-box;
                 }
-                .cat-heading { text-align: center; color: #1D2023; font-family: monospace; font-weight: 700; font-size: 28px; margin-bottom: 30px; }
+                .cat-heading { text-align: center; color: #1D2023; font-family: 'Exo', sans-serif;; font-weight: 700; font-size: 28px; margin-bottom: 30px; }
                 .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 
                 .cat-card {
@@ -230,7 +231,7 @@ function Categories() {
                 .cat-img-wrap { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background-color: #f2f2f2; }
                 .cat-img { width: 100%; height: 100%; object-fit: cover; display: block; }
                 .cat-info { padding: 14px 16px 18px; }
-                .cat-name { font-size: 17px; font-weight: 600; color: #1a1a1a; margin: 0; font-family: monospace; }
+                .cat-name { font-size: 17px; font-weight: 600; color: #1a1a1a; margin: 0; font-family: 'Exo', sans-serif; }
 
                 @media (max-width: 992px) {
                     .cat-grid { grid-template-columns: repeat(2, 1fr); }

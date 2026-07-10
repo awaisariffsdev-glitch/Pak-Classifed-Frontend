@@ -1,3 +1,4 @@
+// Auth context — provides user state, login/logout functions, and persists session to localStorage
 import { createContext, useEffect, useState } from "react";
 
 export const UserContext = createContext({

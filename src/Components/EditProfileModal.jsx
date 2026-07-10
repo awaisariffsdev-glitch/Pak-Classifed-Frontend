@@ -1,3 +1,4 @@
+// Edit profile modal — form to update user fields (name, email, phone, city, password, image) via UpdateContext
 import React, { useState, useContext } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';

@@ -1,3 +1,4 @@
+// Car by category page — fetches cars matching the URL category param and displays them in a grid
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { carGetByCategory } from "../Services/CarServices";

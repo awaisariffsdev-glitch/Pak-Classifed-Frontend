@@ -1,3 +1,4 @@
+// API service — fetches cars by category name from GET /car/category/:category
 import axios from "axios"
 
 export const carGetByCategory = async (category) => {

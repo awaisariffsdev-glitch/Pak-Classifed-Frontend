@@ -1,3 +1,4 @@
+// Add car modal — form with all car fields (title, brand, model, year, price, etc.) and image upload; triggers car list refresh on success
 import React, { useContext, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -221,13 +222,13 @@ const AddCarModal = ({ show, onHide }) => {
                     background-color: #1D2023;
                     border: 2px solid white;
                     color: #f1f1f1;
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                 }
                 .navtheme-modal-header {
                     border-bottom: 1px solid rgba(255,255,255,0.25);
                 }
                 .navtheme-modal-title {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     font-weight: 500;
                     letter-spacing: 0.5px;
                 }
@@ -239,7 +240,7 @@ const AddCarModal = ({ show, onHide }) => {
                     border-top: 1px solid rgba(255,255,255,0.25);
                 }
                 .navtheme-form-label {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     color: #f1f1f1;
                     font-size: 13px;
                     margin-bottom: 4px;
@@ -248,7 +249,7 @@ const AddCarModal = ({ show, onHide }) => {
                     background-color: #26292d !important;
                     color: #f1f1f1 !important;
                     border: 1px solid rgba(255,255,255,0.25) !important;
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                 }
                 .navtheme-form-control:focus {
                     border-color: #f1f1f1 !important;
@@ -258,7 +259,7 @@ const AddCarModal = ({ show, onHide }) => {
                     color: rgba(255,255,255,0.4);
                 }
                 .navtheme-btn-outline {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     background-color: transparent;
                     color: #f1f1f1;
                     border: 1px solid rgba(255,255,255,0.5);
@@ -269,14 +270,14 @@ const AddCarModal = ({ show, onHide }) => {
                     color: #f1f1f1;
                 }
                 .navtheme-btn-submit {
-                    font-family: monospace;
-                    background-color: #7ee8a7;
+                    font-family: 'Exo', sans-serif;
+                    background-color: white;
                     border: none;
                     color: #1D2023;
                     font-weight: 600;
                 }
                 .navtheme-btn-submit:hover {
-                    background-color: #6ad894;
+                    background-color: white;
                     color: #1D2023;
                 }
                 .navtheme-toast {

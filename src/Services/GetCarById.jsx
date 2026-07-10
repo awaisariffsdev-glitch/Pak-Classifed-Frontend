@@ -1,3 +1,4 @@
+// API service — fetches a single car by ID from GET /car/find/:carId
 // ASSUMPTION: no backend route for a single car was provided, so this mirrors the
 // existing CarByUser pattern (`/car/find/user/:userId` -> `carFind`).
 // If your real endpoint or response key differs, this is the one place to change.

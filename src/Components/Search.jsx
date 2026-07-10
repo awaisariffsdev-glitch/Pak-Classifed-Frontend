@@ -113,6 +113,7 @@
 // export default Search;
 
 
+// Search bar — text input with search icon and button; navigates to home with ?q= query param on submit/enter
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
@@ -149,7 +150,7 @@ const Search = () => {
                     className="navtheme-search-input"
                 />
 
-                <button className="navtheme-search-btn font-monospace fw-medium" onClick={handleSearch} >
+                <button className="navtheme-search-btn" onClick={handleSearch} >
                     Search
                 </button>
             </div>
@@ -194,7 +195,7 @@ const Search = () => {
                     border: none;
                     outline: none;
                     font-size: 16px;
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     margin: 0 20px;
                     background: transparent;
                     color: #f1f1f1;
@@ -213,6 +214,8 @@ const Search = () => {
                     border-radius: 50px;
                     padding: 12px 28px;
                     font-size: 15px;
+                    
+                    font-family:Impact;
                     cursor: pointer;
                     transition: all 0.2s ease;
                 }

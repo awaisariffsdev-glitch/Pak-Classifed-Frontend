@@ -374,6 +374,7 @@
 // export default Profile;
 
 
+// Profile page — displays user info and their listed cars; owner can edit profile, edit/delete cars
 import { useContext, useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
@@ -697,7 +698,7 @@ const pageStyles = `
         background-color: #e6e3e3;
         min-height: 100vh;
         padding: 20px;
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         box-sizing: border-box;
     }
     .navtheme-card {
@@ -714,26 +715,26 @@ const pageStyles = `
     .navtheme-card-header { padding: 20px 32px; border-bottom: 1px solid rgba(255,255,255,0.25); flex-shrink: 0; }
     .navtheme-card-body { padding: 28px 32px; flex: 1; min-height: 0; }
     .navtheme-card-footer { padding: 16px 32px; border-top: 1px solid rgba(255,255,255,0.25); flex-shrink: 0; }
-    .navtheme-title { font-family: monospace; font-weight: 500; letter-spacing: 0.5px; color: #f1f1f1; }
+    .navtheme-title { font-family: 'Exo', sans-serif; font-weight: 500; letter-spacing: 0.5px; color: #f1f1f1; }
     .navtheme-avatar-col { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; width: 180px; }
     .navtheme-profile-img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(255,255,255,0.5); margin-bottom: 12px; }
     .navtheme-name-tag { text-align: center; width: 100%; font-size: 14px; word-break: break-word; }
     .navtheme-details-col { flex: 1; min-width: 0; }
-    .navtheme-label { font-family: monospace; color: #1D2023; margin-bottom: 0.3rem; display: block; font-size: 13px; }
-    .navtheme-value { font-family: monospace; color: #f1f1f1; background-color: #26292d; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 8px 12px; margin: 0; min-height: 40px; display: flex; align-items: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .navtheme-btn-outline { font-family: monospace; font-weight: 500; background-color: transparent; color: #f1f1f1; border: 1px solid rgba(255,255,255,0.5); transition: all 0.2s ease; }
+    .navtheme-label { font-family: 'Exo', sans-serif; color: #1D2023; margin-bottom: 0.3rem; display: block; font-size: 13px; }
+    .navtheme-value { font-family: 'Exo', sans-serif; color: #f1f1f1; background-color: #26292d; border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 8px 12px; margin: 0; min-height: 40px; display: flex; align-items: center; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .navtheme-btn-outline { font-family: 'Exo', sans-serif; font-weight: 500; background-color: transparent; color: #f1f1f1; border: 1px solid rgba(255,255,255,0.5); transition: all 0.2s ease; }
     .navtheme-btn-outline:hover { background-color: rgba(255,255,255,0.1); color: #f1f1f1; border: 1px solid #f1f1f1; }
     .navtheme-btn-outline:disabled { opacity: 0.5; cursor: not-allowed; }
-    .navtheme-btn-danger-outline { font-family: monospace; font-weight: 500; background-color: transparent; color: #ff8a8a; border: 1px solid rgba(255,138,138,0.6); transition: all 0.2s ease; }
+    .navtheme-btn-danger-outline { font-family: 'Exo', sans-serif; font-weight: 500; background-color: transparent; color: #ff8a8a; border: 1px solid rgba(255,138,138,0.6); transition: all 0.2s ease; }
     .navtheme-btn-danger-outline:hover { background-color: rgba(255,138,138,0.15); color: #ff8a8a; border: 1px solid #ff8a8a; }
     .navtheme-btn-danger-outline:disabled { opacity: 0.5; cursor: not-allowed; }
-    .navtheme-toast { background-color: #1D2023; border: 1px solid rgba(255,255,255,0.3); font-family: monospace; }
+    .navtheme-toast { background-color: #1D2023; border: 1px solid rgba(255,255,255,0.3); font-family: 'Exo', sans-serif; }
     .navtheme-toast .toast-header { background-color: #1D2023; color: #f1f1f1; border-bottom: 1px solid rgba(255,255,255,0.2); }
     .navtheme-toast-success .toast-body { color: #7ee8a7; }
     .navtheme-toast-danger .toast-body { color: #ff8a8a; }
 
     .navtheme-usercars-section { max-width: 900px; margin: 32px auto 0; }
-    .navtheme-usercars-heading { color: #1D2023; font-family: monospace; font-weight: 700; text-align: center; margin-bottom: 20px; }
+    .navtheme-usercars-heading { color: #1D2023; font-family: 'Exo', sans-serif; font-weight: 700; text-align: center; margin-bottom: 20px; }
     .navtheme-usercars-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
     .navtheme-usercar-card { background-color: #1D2023; border: 1px solid rgba(255,255,255,0.25); border-radius: 10px; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .navtheme-usercar-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); }

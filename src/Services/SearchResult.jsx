@@ -1,6 +1,7 @@
 // import { useEffect, useState } from "react";
 // import { useSearchParams } from "react-router-dom"
 
+// API service — searches cars by query string via GET /car/search?q=...
 import axios from "axios"
 
 // const Searchesult=()=>{

@@ -1,3 +1,4 @@
+// Footer — site footer with company info, quick links, contact details, social icons, and newsletter signup
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -126,7 +127,7 @@ const Footer = () => {
         .footertheme-footer {
           background-color: #1D2023;
           color: #f1f1f1;
-          font-family: monospace;
+          font-family: 'Exo', sans-serif;
           border-top: 1px solid rgba(255,255,255,0.15);
         }
         .footertheme-heading {

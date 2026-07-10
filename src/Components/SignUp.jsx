@@ -354,6 +354,7 @@
 
 // export default SignUp;
 
+// Sign-up modal — registration form with file upload, triggers OTP verification after successful signup
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -418,7 +419,7 @@ function SignUp({ onAuthSuccess }) {
 
     return (
         <>
-            <Button className="navtheme-navbtn fw-medium font-monospace" onClick={handleShow}>
+            <Button className="navtheme-navbtn font-exo" onClick={handleShow}>
                 SignUp
             </Button>
 
@@ -447,7 +448,7 @@ function SignUp({ onAuthSuccess }) {
                     border-top: 1px solid rgba(255,255,255,0.25);
                 }
                 .navtheme-title {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     font-weight: 500;
                     letter-spacing: 0.5px;
                     color: #f1f1f1;
@@ -456,7 +457,7 @@ function SignUp({ onAuthSuccess }) {
                     background-color: #26292d;
                     border: 1px solid rgba(255,255,255,0.3);
                     color: #f1f1f1;
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                 }
                 .navtheme-input:focus {
                     background-color: #26292d;
@@ -466,14 +467,14 @@ function SignUp({ onAuthSuccess }) {
                 }
                 .navtheme-input::placeholder { color: #fefefe; }
                 .navtheme-label {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     color: #fefefe;
                     margin-bottom: 0.3rem;
                     display: block;
                     font-size: 14px;
                 }
                 .navtheme-btn-dark {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     font-weight: 500;
                     background-color: #f1f1f1;
                     color: #1D2023;
@@ -486,7 +487,7 @@ function SignUp({ onAuthSuccess }) {
                     border: 1px solid #f1f1f1;
                 }
                 .navtheme-btn-outline {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     font-weight: 500;
                     background-color: transparent;
                     color: #f1f1f1;
@@ -519,7 +520,7 @@ function SignUp({ onAuthSuccess }) {
                 .navtheme-toast {
                     background-color: #1D2023;
                     border: 1px solid rgba(255,255,255,0.3);
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                 }
                 .navtheme-toast .toast-header {
                     background-color: #1D2023;

@@ -1,3 +1,4 @@
+// Entry point — wraps the App with all context providers (auth, user cars, refresh, update) and BrowserRouter
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'

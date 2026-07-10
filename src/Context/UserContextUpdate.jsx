@@ -1,3 +1,4 @@
+// User update context — provides updateUser API call to modify profile data with auth token
 import axios from "axios";
 import { createContext, useCallback, useState } from "react";
 

@@ -1,3 +1,4 @@
+// Contact page — hero section, contact info cards, Google Maps embed, and message form with toast feedback
 import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -183,7 +184,7 @@ const ContactPage = () => {
         .contactpage-wrapper {
           background-color: white ;
           color: #1D2023;
-          font-family: monospace;
+          font-family: 'Exo', sans-serif;
           min-height: 100vh;
         }
 
@@ -289,6 +290,7 @@ const ContactPage = () => {
 }
         .contactpage-form .form-control::placeholder {
           color: rgba(241,241,241,0.5);
+          font-family:'Exo', sans-serif;
         }
         .contactpage-form .form-control:focus {
           background-color: #24282b;
@@ -302,7 +304,7 @@ const ContactPage = () => {
           border-color: white;
           color: white;
           font-weight: 700;
-          font-family: monospace;
+          font-family: 'Exo', sans-serif;
           padding: 10px 0;
         }
         .contactpage-submit:hover,

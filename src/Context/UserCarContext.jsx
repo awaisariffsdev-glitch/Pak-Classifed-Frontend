@@ -1,3 +1,4 @@
+// User cars context — fetches and caches cars belonging to a specific user, with loading/error state
 import { Children, createContext, useCallback, useState } from "react";
 import { CarByUser } from "../Services/CarFetchUser";
 

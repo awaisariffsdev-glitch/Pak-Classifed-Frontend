@@ -152,6 +152,7 @@
 
 // // export default NavBar
 
+// Navigation bar — responsive navbar with brand logo, links (Home/About/Sell Car/Categories/Contact), auth buttons, and profile dropdown
 import { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -327,7 +328,7 @@ const NavBar = () => {
         }
         .navtheme-link {
           color: #f1f1f1 !important;
-          font-family: monospace;
+          font-family: 'Exo', sans-serif;
           font-weight: 500;
           text-decoration:none
         }
@@ -370,7 +371,7 @@ const NavBar = () => {
         .navtheme-dropdown-menu {
           background-color: #1D2023;
           border: 1px solid rgba(255,255,255,0.3);
-          font-family: monospace;
+          font-family: 'Exo', sans-serif;
           min-width: 180px;
         }
         .navtheme-dropdown-item {

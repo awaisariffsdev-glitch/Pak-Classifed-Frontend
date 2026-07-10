@@ -1,3 +1,4 @@
+// Login modal — email/password form with validation, toast notifications, and auth context integration
 import { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -107,7 +108,7 @@ function LogIn() {
     return (
         <>
             <Button
-                className="navtheme-navbtn fw-medium font-monospace"
+                className="navtheme-navbtn font-exo"
                 onClick={handleShow}
             >
                 LogIn
@@ -138,7 +139,7 @@ function LogIn() {
                     border-top: 1px solid rgba(255,255,255,0.25);
                 }
                 .navtheme-title {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     font-weight: 500;
                     letter-spacing: 0.5px;
                     color: #f1f1f1;
@@ -157,15 +158,16 @@ function LogIn() {
                 }
                 .navtheme-input::placeholder {
                     color: #fefefe;
+                    font-family:'Exo', sans-serif;
                 }
                 .navtheme-label {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     color: #fefefe;
                     margin-bottom: 0.35rem;
                     display: block;
                 }
                 .navtheme-btn-dark {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     font-weight: 500;
                     background-color: #f1f1f1;
                     color: #1D2023;
@@ -178,7 +180,7 @@ function LogIn() {
                     border: 1px solid #f1f1f1;
                 }
                 .navtheme-btn-outline {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     font-weight: 500;
                     background-color: transparent;
                     color: #f1f1f1;
@@ -219,7 +221,7 @@ function LogIn() {
                 .navtheme-toast {
                     background-color: #1D2023;
                     border: 1px solid rgba(255,255,255,0.3);
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                 }
                 .navtheme-toast .toast-header {
                     background-color: #1D2023;

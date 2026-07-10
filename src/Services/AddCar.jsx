@@ -1,3 +1,4 @@
+// API service — adds a new car via POST /car/add with FormData (image + fields)
 export default async function AddCar(carData) {
     try {
         const token = localStorage.getItem("token");

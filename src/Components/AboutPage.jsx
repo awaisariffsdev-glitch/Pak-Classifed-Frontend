@@ -1,3 +1,4 @@
+// About page — hero image with title, photo collage, company description, and feature list
 import React from 'react';
 
 
@@ -124,7 +125,7 @@ const pageStyles = `
         }
     .navtheme-about-page {
         background-color: #ffffff;
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
     }
 
     /* HERO */
@@ -166,7 +167,7 @@ const pageStyles = `
     }
     .navtheme-about-hero-title {
         color: #f1f1f1;
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-weight: 700;
         font-size: 34px;
         letter-spacing: 0.5px;
@@ -206,7 +207,7 @@ const pageStyles = `
         min-width: 0;
     }
     .navtheme-about-heading {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-weight: 700;
         font-size: 26px;
         line-height: 1.35;
@@ -214,7 +215,7 @@ const pageStyles = `
         margin: 0 0 18px;
     }
     .navtheme-about-paragraph {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-size: 14px;
         line-height: 1.7;
         color: #4a4d50;
@@ -232,7 +233,7 @@ const pageStyles = `
         display: flex;
         align-items: center;
         gap: 10px;
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-size: 14px;
         font-weight: 500;
         color: #1D2023;

@@ -1,3 +1,4 @@
+// Car details page — fetches and displays full details of a single car by ID, with image, specs grid, description, and back navigation
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';

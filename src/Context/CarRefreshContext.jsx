@@ -1,3 +1,4 @@
+// Car refresh context — provides a triggerRefresh function to force CarBoardMain to refetch cars
 import { createContext, useCallback, useState } from "react";
 
 export const CarRefreshContext = createContext();

@@ -116,6 +116,7 @@
 // export default VerifyOTP;
 
 
+// OTP verification modal — verifies email via OTP input with resend capability and toast feedback
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';

@@ -1,3 +1,4 @@
+// Update/delete car modal — pre-filled form to edit car details or delete the listing with confirmation flow
 import { useContext, useEffect, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -283,13 +284,13 @@ const modalStyles = `
         border: 2px solid white;
         border-radius: 10px;
         color: #f1f1f1;
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
     }
     .navtheme-modal-header {
         border-bottom: 1px solid rgba(255,255,255,0.25);
     }
     .navtheme-modal-title {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-weight: 500;
         letter-spacing: 0.5px;
         color: #f1f1f1;
@@ -302,14 +303,14 @@ const modalStyles = `
         flex-wrap: wrap;
     }
     .navtheme-label {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         color: #cfcfcf;
         margin-bottom: 0.3rem;
         display: block;
         font-size: 13px;
     }
     .navtheme-modal-input {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         background-color: #26292d !important;
         color: #f1f1f1 !important;
         border: 1px solid rgba(255,255,255,0.2) !important;
@@ -333,7 +334,7 @@ const modalStyles = `
         font-size: 13px;
     }
     .navtheme-btn-outline {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-weight: 500;
         background-color: transparent;
         color: #f1f1f1;
@@ -346,7 +347,7 @@ const modalStyles = `
         border: 1px solid #f1f1f1;
     }
     .navtheme-btn-solid {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-weight: 500;
         background-color: #f1f1f1;
         color: #1D2023;
@@ -358,7 +359,7 @@ const modalStyles = `
         color: #1D2023;
     }
     .navtheme-btn-danger-outline {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-weight: 500;
         background-color: transparent;
         color: #ff8a8a;
@@ -369,7 +370,7 @@ const modalStyles = `
         color: #ff8a8a;
     }
     .navtheme-btn-danger-solid {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-weight: 500;
         background-color: #ff8a8a;
         color: #1D2023;
@@ -379,14 +380,14 @@ const modalStyles = `
         background-color: #ff6f6f;
     }
     .navtheme-confirm-text {
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
         font-size: 13px;
         color: #f1f1f1;
     }
     .navtheme-toast {
         background-color: #1D2023;
         border: 1px solid rgba(255,255,255,0.3);
-        font-family: monospace;
+        font-family: 'Exo', sans-serif;
     }
     .navtheme-toast .toast-header {
         background-color: #1D2023;

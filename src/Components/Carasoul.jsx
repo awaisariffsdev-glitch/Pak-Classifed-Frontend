@@ -50,6 +50,7 @@
 
 // export default CarouselFadeExample;
 
+// Hero carousel — displays rotating banner images with overlay text, Browse Cars button, and Sell Car trigger
 import Carousel from 'react-bootstrap/Carousel';
 import AddCarModal from './AddCarModel';
 import { useContext, useState } from 'react';
@@ -128,13 +129,13 @@ function CarouselFadeExample() {
                 }
 
                 .carousel-heading {
-                    font-family: monospace;
+                    font-family: Impact;
                     font-size: 2.5rem;
                     line-height: 1.25;
                 }
 
                 .carousel-subtext {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     font-size: 1.1rem;
                     margin-top: 10px;
                 }
@@ -144,7 +145,7 @@ function CarouselFadeExample() {
                 }
 
                 .carousel-btn {
-                    font-family: monospace;
+                    font-family: 'Exo', sans-serif;
                     white-space: nowrap;
                                         width:120px
 

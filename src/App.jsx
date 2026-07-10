@@ -131,6 +131,7 @@
 // export default App
 
 
+// Root component — defines all routes, conditionally renders carousel/search/footer based on current path
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import NavBar from './Components/NavBar'

@@ -1,3 +1,4 @@
+/* Global styles — hover effect shared across components */
 .hover-effect:hover{
   color: red !important;
 }

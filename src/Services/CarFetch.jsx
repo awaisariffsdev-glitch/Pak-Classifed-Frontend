@@ -20,6 +20,7 @@
 
 // }
 
+// API service — fetches all cars from GET /car/findAll with toast notifications
 import { toast } from "react-toastify";
 
 export default async function GetCars() {
