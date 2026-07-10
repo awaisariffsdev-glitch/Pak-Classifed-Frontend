@@ -184,16 +184,17 @@ const CarBoardMain = ({ showAll = true }) => {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
                     gap: 20px;
-                    /* CHANGED: max-width/margin removed — .cbm-container now
-                       controls the overall content width instead of the grid
-                       owning its own separate 1200px box */
+                   
                 }
 
                 .cbm-card {
-                    background: #1D2023;
+                    background: white;
+                    color:black !important; 
                     border-radius: 10px;
                     overflow: hidden;
-                    border: 1px solid rgba(255,255,255,.2);
+                    
+                    border:1px solid #1D2023;
+
                     opacity: 0;
                     transform: translateY(40px);
                     transition: .6s;
@@ -232,23 +233,23 @@ const CarBoardMain = ({ showAll = true }) => {
                 }
 
                 .cbm-car-title {
-                    color:#fff;
+                    color:#1D2023;
                     margin-bottom:8px;
                 }
 
                 .cbm-car-meta {
-                    color:#d0d0d0;
+                    color:#1D2023;
                     font-size:13px;
                 }
 
                 .cbm-car-city {
-                    color:#b8b8b8;
+                    color:#1D2023;
                     font-size:13px;
                     margin:6px 0;
                 }
 
                 .cbm-car-price {
-                    color:#7ee8a7;
+                    color:#1D2023;
                     font-size:18px;
                     font-weight:bold;
                 }
