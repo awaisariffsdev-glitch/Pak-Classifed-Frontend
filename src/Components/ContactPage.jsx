@@ -39,12 +39,6 @@ const ContactPage = () => {
     e.preventDefault();
     setSubmitting(true);
     try {
-      // Wire this up to your backend contact endpoint, e.g.:
-      // await fetch('http://localhost:8080/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
       setShowToast(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (err) {
@@ -104,7 +98,7 @@ const ContactPage = () => {
                 src="https://www.google.com/maps?q=Gulberg%20III%2C%20Lahore&output=embed"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
+                style={{ border: "2px solid black",borderRadius:"10px" }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

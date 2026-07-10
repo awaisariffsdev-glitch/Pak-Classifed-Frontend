@@ -164,18 +164,23 @@ import AddCarModal from './AddCarModel';
 import SignUp from './SignUp';
 import LogIn from './LogIn';
 import { UserContext } from '../Context/UserContext';
+import Toast from 'react-bootstrap/Toast';
+import ToastContainer from 'react-bootstrap/ToastContainer';
 
 const NavBar = () => {
   const { loggedIn, logout, current } = useContext(UserContext);
   const [expanded, setExpanded] = useState(false);
   const [showAddCar, setShowAddCar] = useState(false);
+  const [toast, setToast] = useState({ show: false, message: "", variant: "success" });
+  const showToast = (message, variant = "success") => setToast({ show: true, message, variant });
+
 
   const closeExpand = () => setExpanded(false);
 
 
   const handleSellCar = () => {
     if (!loggedIn) {
-      alert("First Login to Sell Car")
+      showToast("First Login to Sell Car")
       return
     };
     setShowAddCar(true);
@@ -291,6 +296,20 @@ const NavBar = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
+      <ToastContainer position="top-end" className="p-3" style={{ zIndex: 2000 }}>
+        <Toast
+          onClose={() => setToast((t) => ({ ...t, show: false }))}
+          show={toast.show}
+          delay={2500}
+          autohide
+          className={`navtheme-toast navtheme-toast-${toast.variant}`}
+        >
+          <Toast.Header closeVariant="white">
+            <strong className="me-auto">{toast.variant === "success" ? "Success" : "Error"}</strong>
+          </Toast.Header>
+          <Toast.Body>{toast.message}</Toast.Body>
+        </Toast>
+      </ToastContainer>
 
       <style>{`
         .navtheme-navbar {
