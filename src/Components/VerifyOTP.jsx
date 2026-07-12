@@ -23,7 +23,7 @@
 //         setError("");
 
 //         try {
-//             const response = await axios.post("http://localhost:8080/user/verify", {
+//             const response = await axios.post("https://pak-classifed-backend-production.up.railway.app/user/verify", {
 //                 email,
 //                 otp
 //             });
@@ -50,7 +50,7 @@
 //         setError("");
 //         setLoading(true);
 //         try {
-//             const response = await axios.post("http://localhost:8080/user/verify", {
+//             const response = await axios.post("https://pak-classifed-backend-production.up.railway.app/user/verify", {
 //                 email
 //             });
 //             console.log("OTP Resent", response.data);
@@ -152,7 +152,7 @@ function VerifyOTP({ show, handleClose, email, onVerified }) {
         setLoading(true);
 
         try {
-            const response = await axios.post("http://localhost:8080/user/verify", {
+            const response = await axios.post("https://pak-classifed-backend-production.up.railway.app/user/verify", {
                 email,
                 otp
             });
@@ -184,7 +184,7 @@ function VerifyOTP({ show, handleClose, email, onVerified }) {
         setResending(true);
         try {
             // ✅ Resend must hit the "send OTP" endpoint, not /user/verify
-            const response = await axios.post("http://localhost:8080/user/requestSignUp", {
+            const response = await axios.post("https://pak-classifed-backend-production.up.railway.app/user/requestSignUp", {
                 email,
                 resend:true
             });

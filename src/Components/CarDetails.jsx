@@ -62,7 +62,7 @@ function CarDetails() {
     }
 
     const imageSrc = car?.image
-        ? `http://localhost:8080/${car.image}`
+        ? `https://pak-classifed-backend-production.up.railway.app/${car.image}`
         : 'https://picsum.photos/800/600';
 
     return (

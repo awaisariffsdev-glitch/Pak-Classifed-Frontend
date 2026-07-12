@@ -108,7 +108,7 @@ const CarBoardMain = ({ showAll = true }) => {
                                             <img
                                                 src={
                                                     car?.image
-                                                        ? `http://localhost:8080/${car.image}`
+                                                        ? `https://pak-classifed-backend-production.up.railway.app/${car.image}`
                                                         : 'https://picsum.photos/400/300'
                                                 }
                                                 alt={car.title}

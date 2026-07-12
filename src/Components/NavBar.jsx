@@ -55,7 +55,7 @@
 // //             >
 // //               <div className="d-flex align-items-center gap-3">
 // //                 <img
-// //                   src={current?.image ? `http://localhost:8080/${current.image}` : "https://picsum.photos/200/300"}
+// //                   src={current?.image ? `https://pak-classifed-backend-production.up.railway.app/${current.image}` : "https://picsum.photos/200/300"}
 // //                   alt="Profile"
 // //                   className="navtheme-avatar-img"
 // //                 />
@@ -213,7 +213,7 @@ const NavBar = () => {
               >
                 <div className="d-flex align-items-center gap-2">
                   <img
-                    src={current?.image ? `http://localhost:8080/${current.image}` : "https://picsum.photos/200/300"}
+                    src={current?.image ? `https://pak-classifed-backend-production.up.railway.app/${current.image}` : "https://picsum.photos/200/300"}
                     alt="Profile"
                     className="navtheme-avatar-img"
                   />

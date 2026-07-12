@@ -40,7 +40,7 @@ function UpdateCarModal({ show, onHide, car, userId, onDeleted }) {
                 price: car.price || '',
                 description: car.description || '',
             });
-            setPreviewSrc(car.image ? `http://localhost:8080/${car.image}` : null);
+            setPreviewSrc(car.image ? `https://pak-classifed-backend-production.up.railway.app/${car.image}` : null);
         }
         setImageFile(null);
         setConfirmingDelete(false);

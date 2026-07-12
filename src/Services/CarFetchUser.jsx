@@ -2,7 +2,7 @@
 export const CarByUser = async (userId) => {
     try {
         const token = localStorage.getItem("token");
-        const response = await fetch(`http://localhost:8080/car/find/user/${userId}`, {
+        const response = await fetch(`https://pak-classifed-backend-production.up.railway.app/car/find/user/${userId}`, {
             headers: {
                 "Authorization": `Bearer ${token}`
             }

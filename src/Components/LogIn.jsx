@@ -47,7 +47,7 @@ function LogIn() {
             // newForm.append("email", form.email);
             // newForm.append("password", form.password);
 
-            const response = await axios.post("http://localhost:8080/user/logIn",
+            const response = await axios.post("https://pak-classifed-backend-production.up.railway.app/user/logIn",
                 {
                     email: form.email,
                     password: form.password

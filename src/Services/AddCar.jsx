@@ -9,7 +9,7 @@ export default async function AddCar(carData) {
             }
         })
 
-        const response = await fetch("http://localhost:8080/car/add", {
+        const response = await fetch("https://pak-classifed-backend-production.up.railway.app/car/add", {
             method: "POST",
             headers: {
                 // "Content-Type":"application/json",

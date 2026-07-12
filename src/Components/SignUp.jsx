@@ -50,7 +50,7 @@
 //             newForm.append("city", form.city);
 //             newForm.append("password", form.password);
 
-//             const response = await axios.post("http://localhost:8080/user/signUp", newForm);
+//             const response = await axios.post("https://pak-classifed-backend-production.up.railway.app/user/signUp", newForm);
 //             console.log("User Register Successfully", response.data);
 
 //             showToast("Registered successfully! Check your email for the OTP.", "success");
@@ -393,7 +393,7 @@ function SignUp({ onAuthSuccess }) {
             newForm.append("city", form.city);
             newForm.append("password", form.password);
 
-            const response = await axios.post("http://localhost:8080/user/signUp", newForm);
+            const response = await axios.post("https://pak-classifed-backend-production.up.railway.app/user/signUp", newForm);
             showToast("Registered successfully! Check your email for the OTP.", "success");
 
             handleClose();

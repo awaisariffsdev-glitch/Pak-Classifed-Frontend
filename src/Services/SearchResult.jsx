@@ -25,7 +25,7 @@ import axios from "axios"
 
 export const SearchCars = async (query) => {
     try {
-        const response = await axios.get("http://localhost:8080/car/search", {
+        const response = await axios.get("https://pak-classifed-backend-production.up.railway.app/car/search", {
             params: { q: query }
         });
         return response.data.cars;

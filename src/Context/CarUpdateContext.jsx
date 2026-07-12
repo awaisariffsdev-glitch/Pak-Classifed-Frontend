@@ -20,7 +20,7 @@ export const CarUpdateProvider = ({ children }) => {
             setError(null);
             const token = localStorage.getItem("token");
 
-            const response = await axios.put(`http://localhost:8080/car/update/${id}`, formData,
+            const response = await axios.put(`https://pak-classifed-backend-production.up.railway.app/car/update/${id}`, formData,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -63,7 +63,7 @@ export const CarUpdateProvider = ({ children }) => {
             setLoading(true);
             setError(null);
             const token = localStorage.getItem("token");
-            const response = await axios.delete(`http://localhost:8080/car/delete/${id}`,
+            const response = await axios.delete(`https://pak-classifed-backend-production.up.railway.app/car/delete/${id}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

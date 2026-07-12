@@ -86,7 +86,7 @@
 //             try {
 //                 const token = localStorage.getItem("token");
 //                 const response = await axios.get(
-//                     `http://localhost:8080/user/find/${profileId}`,
+//                     `https://pak-classifed-backend-production.up.railway.app/user/find/${profileId}`,
 //                     { headers: { Authorization: `Bearer ${token}` } }
 //                 );
 
@@ -141,7 +141,7 @@
 //     }
 
 //     const imageSrc = profileData?.image
-//         ? `http://localhost:8080/${profileData.image}`
+//         ? `https://pak-classifed-backend-production.up.railway.app/${profileData.image}`
 //         : "https://picsum.photos/200/300";
 
 //     return (
@@ -236,7 +236,7 @@
 //                                 <div key={car._id} className="navtheme-usercar-card">
 //                                     <div className="navtheme-usercar-img-wrap">
 //                                         <img
-//                                             src={car?.image ? `http://localhost:8080/${car.image}` : "https://picsum.photos/400/300"}
+//                                             src={car?.image ? `https://pak-classifed-backend-production.up.railway.app/${car.image}` : "https://picsum.photos/400/300"}
 //                                             alt={car.title}
 //                                             className="navtheme-usercar-img"
 //                                         />
@@ -463,7 +463,7 @@ function Profile() {
             try {
                 const token = localStorage.getItem("token");
                 const response = await axios.get(
-                    `http://localhost:8080/user/find/${profileId}`,
+                    `https://pak-classifed-backend-production.up.railway.app/user/find/${profileId}`,
                     { headers: { Authorization: `Bearer ${token}` } }
                 );
 
@@ -528,7 +528,7 @@ function Profile() {
     }
 
     const imageSrc = profileData?.image
-        ? `http://localhost:8080/${profileData.image}`
+        ? `https://pak-classifed-backend-production.up.railway.app/${profileData.image}`
         : "https://picsum.photos/200/300";
 
     return (
@@ -623,7 +623,7 @@ function Profile() {
                                 <div key={car._id} className="navtheme-usercar-card">
                                     <div className="navtheme-usercar-img-wrap">
                                         <img
-                                            src={car?.image ? `http://localhost:8080/${car.image}` : "https://picsum.photos/400/300"}
+                                            src={car?.image ? `https://pak-classifed-backend-production.up.railway.app/${car.image}` : "https://picsum.photos/400/300"}
                                             alt={car.title}
                                             className="navtheme-usercar-img"
                                         />

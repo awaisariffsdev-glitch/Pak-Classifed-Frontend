@@ -58,7 +58,7 @@ function CarByCategory() {
                         <div key={car._id} className="cbc-card">
                             <div className="cbc-img-wrap">
                                 <img
-                                    src={car?.image ? `http://localhost:8080/${car.image}` : "https://picsum.photos/400/300"}
+                                    src={car?.image ? `https://pak-classifed-backend-production.up.railway.app/${car.image}` : "https://picsum.photos/400/300"}
                                     alt={car.title}
                                     className="cbc-img"
                                 />

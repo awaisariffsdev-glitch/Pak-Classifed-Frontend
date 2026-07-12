@@ -20,7 +20,7 @@ export default function UpdateProvider({ children }) {
         try {
             const token = localStorage.getItem("token");
             const response = await axios.put(
-                `http://localhost:8080/user/update/${userId}`,
+                `https://pak-classifed-backend-production.up.railway.app/user/update/${userId}`,
                 formData,
                 {
                     headers: {

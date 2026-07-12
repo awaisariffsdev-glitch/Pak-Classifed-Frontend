@@ -2,7 +2,7 @@
 //     try {
 //         const token = localStorage.getItem("token");
 
-//         const response = await fetch("http://localhost:8080/car/findAll", {
+//         const response = await fetch("https://pak-classifed-backend-production.up.railway.app/car/findAll", {
 //             method: "GET",
 //             headers: {
 //                 "Authorization": `Bearer ${token}`
@@ -27,7 +27,7 @@ export default async function GetCars() {
     try {
         // const token = localStorage.getItem("token");
 
-        const response = await fetch("http://localhost:8080/car/findAll", {
+        const response = await fetch("https://pak-classifed-backend-production.up.railway.app/car/findAll", {
             method: "GET",
             
         });
