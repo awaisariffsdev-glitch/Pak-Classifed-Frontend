@@ -379,6 +379,7 @@ function SignUp({ onAuthSuccess }) {
     const handleOtpClose = () => setShowOtp(false);
 
     const [form, setForm] = useState({
+
         fullname: "", email: "", image: "", phone: "", city: "", password: ""
     });
 
@@ -623,7 +624,6 @@ function SignUp({ onAuthSuccess }) {
                 </Modal.Footer>
             </Modal>
 
-            <VerifyOTP show={showOtp} handleClose={handleOtpClose} email={form.email} onVerified={handleVerified} />
 
 
         </>
