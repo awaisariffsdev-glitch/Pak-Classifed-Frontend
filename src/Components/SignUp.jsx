@@ -363,7 +363,7 @@ import Col from 'react-bootstrap/Col';
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 import axios from 'axios';
-import VerifyOTP from './VerifyOTP';
+
 
 function SignUp({ onAuthSuccess }) {
     const [show, setShow] = useState(false);
